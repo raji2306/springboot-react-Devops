@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="picofme (2).png" alt="Rajesh S" width="150">
+  <img src="picofme (5).png" alt="Rajesh S" width="150">
 </div>
 
 # About Me
