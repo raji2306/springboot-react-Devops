@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="your-profile-picture-url.jpg" alt="Your Name">
+  <img src="94977452.png" alt="Your Name">
 </div>
 
 # About Me
