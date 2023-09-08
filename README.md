@@ -16,7 +16,8 @@ Hi, I'm Rajesh S. I am passionate about Development & Devops, and I enjoy writin
 - [ ] Researcher
 - [ ] Other: [Specify]
 
-## Languages Known
+<details>
+<summary><strong>Languages Known</strong></summary
 
 - [x] Python
 - [ ] JavaScript
@@ -24,6 +25,8 @@ Hi, I'm Rajesh S. I am passionate about Development & Devops, and I enjoy writin
 - [ ] C++
 - [x] Shell Scripting
 - [ ] Other: [Specify]
+
+</details>
 
 ## Skills
 
