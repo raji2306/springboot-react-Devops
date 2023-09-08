@@ -24,7 +24,7 @@ List some of your top skills or technologies you are proficient in. You can use 
 - Cloud
 - DevOps
 - Team Management
-- 
+  
 </details>
 
 <details>
