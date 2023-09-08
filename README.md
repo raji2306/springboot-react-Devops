@@ -17,15 +17,13 @@ Hi, I'm Rajesh S. I am passionate about Development & Devops, and I enjoy writin
 - [ ] Other: [Specify]
 
 ## Languages Known
-  
-- ☑️ Python
-- ◻️ JavaScript
-- ☑️ Java
-- ◻️ C++
-- ☑️ Shell Scripting
-- ◻️ Other: [Specify]
 
-</details>
+- [x] Python
+- [ ] JavaScript
+- [x] Java
+- [ ] C++
+- [x] Shell Scripting
+- [ ] Other: [Specify]
 
 ## Skills
 
