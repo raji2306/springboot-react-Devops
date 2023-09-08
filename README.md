@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="picofme (2).png" alt="Rajesh S" width="200">
+  <img src="picofme (2).png" alt="Rajesh S" width="150">
 </div>
 
 # About Me
@@ -9,7 +9,7 @@ Hi, I'm Rajesh S. I am passionate about Development & Devops, and I enjoy writin
 ## Roles
 
 - [ ] Developer
-- ✅ DevOps Engineer
+✅ DevOps Engineer
 - [ ] Designer
 - [ ] Data Scientist
 - [ ] Product Manager
