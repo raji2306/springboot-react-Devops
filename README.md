@@ -2,15 +2,11 @@
   <img src="picofme (6).png" alt="Rajesh S" width="150">
 </div>
 
-<details>
-<summary><strong>About Me</strong></summary>
-  
-Hi, I'm Rajesh S. I am passionate about Development & DevOps, and I enjoy writing blogs and making YouTube videos. You can find me on [Medium](https://medium.com/@rajeshsuresh154).
+# About Me
 
-</details>
+Hi, I'm Rajesh S. I am passionate about Development & Devops, and I enjoy writing blogs  and make youtube videos. You can find me on https://medium.com/@rajeshsuresh154
 
-<details>
-<summary><strong>Roles</strong></summary>
+## Roles
   
 - [ ] Developer
 - [x] DevOps Engineer
@@ -20,15 +16,15 @@ Hi, I'm Rajesh S. I am passionate about Development & DevOps, and I enjoy writin
 - [ ] Researcher
 - [ ] Other: [Specify]
 
-</details>
 
-<details>
-<summary><strong>Skills</strong></summary>
-  
+## Skills
+
+List some of your top skills or technologies you are proficient in. You can use bullet points for clarity.
+
 - Cloud
 - DevOps
 - Team Management
-
+- 
 </details>
 
 <details>
@@ -46,11 +42,8 @@ Hi, I'm Rajesh S. I am passionate about Development & DevOps, and I enjoy writin
 
 </details>
 
-<details>
-<summary><strong>Contact</strong></summary>
-  
-You can reach out to me via [email](mailto:rajeshsuresh154@gmail.com).
+## Contact
+
+You can reach out to me via rajeshsuresh154@gmail.com
 
 Feel free to explore my repositories and reach out if you have any questions or collaboration ideas.
-
-</details>
