@@ -2,47 +2,55 @@
   <img src="picofme (6).png" alt="Rajesh S" width="150">
 </div>
 
-# About Me
+<details>
+<summary><strong>About Me</strong></summary>
+  
+Hi, I'm Rajesh S. I am passionate about Development & DevOps, and I enjoy writing blogs and making YouTube videos. You can find me on [Medium](https://medium.com/@rajeshsuresh154).
 
-Hi, I'm Rajesh S. I am passionate about Development & Devops, and I enjoy writing blogs  and make youtube videos. You can find me on https://medium.com/@rajeshsuresh154
+</details>
 
-## Roles
-
+<details>
+<summary><strong>Roles</strong></summary>
+  
 - [ ] Developer
-- &#9745; DevOps Engineer
+- [x] DevOps Engineer
 - [ ] Designer
 - [ ] Data Scientist
 - [ ] Product Manager
 - [ ] Researcher
 - [ ] Other: [Specify]
 
-## Skills
+</details>
 
-List some of your top skills or technologies you are proficient in. You can use bullet points for clarity.
-
+<details>
+<summary><strong>Skills</strong></summary>
+  
 - Cloud
 - DevOps
 - Team Management
 
-## Projects
+</details>
 
-Here are some of the projects I'm proud of:
-
+<details>
+<summary><strong>Projects</strong></summary>
+  
 ### Project 1
-
-- Description: Building a Telegram Bot and Leveraging AWS Lambda for Seamless Functioning
-- Role: This project was done by me on free time
-- Link: https://github.com/raji2306/sturdy-disco/tree/telegram-bot
+- **Description:** Building a Telegram Bot and Leveraging AWS Lambda for Seamless Functioning
+- **Role:** This project was done by me in my free time
+- **Link:** [GitHub Repo](https://github.com/raji2306/sturdy-disco/tree/telegram-bot)
 
 ### Project 2
+- **Description:** Building and Scaling a MediaWiki Application with Terraform, Ansible, and Jenkins
+- **Role:** Task given by someone. It was fully done by me
+- **Link:** [GitHub Repo](https://github.com/raji2306/mediawikiApplcation)
 
-- Description: Building and Scaling a MediaWiki Application with Terraform, Ansible, and Jenkins
-- Role: Task given by someone. It was fully done by me 
-- Link: https://github.com/raji2306/mediawikiApplcation
+</details>
 
-## Contact
-
-You can reach out to me via rajeshsuresh154@gmail.com
+<details>
+<summary><strong>Contact</strong></summary>
+  
+You can reach out to me via [email](mailto:rajeshsuresh154@gmail.com).
 
 Feel free to explore my repositories and reach out if you have any questions or collaboration ideas.
 
+</details>
