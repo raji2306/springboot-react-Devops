@@ -16,27 +16,14 @@ Hi, I'm Rajesh S. I am passionate about Development & Devops, and I enjoy writin
 - [ ] Researcher
 - [ ] Other: [Specify]
 
-<details>
-<summary><strong>Programming Languages Known</strong></summary>
+## Languages Known
   
-<div style="display: flex; flex-wrap: wrap;">
-  <div style="flex: 50%; padding: 5px;">
-    <input type="checkbox" id="python" name="python" value="python" checked>
-    <label for="python">Python</label><br>
-    <input type="checkbox" id="javascript" name="javascript" value="javascript">
-    <label for="javascript">JavaScript</label><br>
-    <input type="checkbox" id="java" name="java" value="java" checked>
-    <label for="java">Java</label><br>
-  </div>
-  <div style="flex: 50%; padding: 5px;">
-    <input type="checkbox" id="cpp" name="cpp" value="cpp">
-    <label for="cpp">C++</label><br>
-    <input type="checkbox" id="shell" name="shell" value="shell" checked>
-    <label for="shell">Shell Scripting</label><br>
-    <input type="checkbox" id="other" name="other" value="other">
-    <label for="other">Other: [Specify]</label><br>
-  </div>
-</div>
+- ☑️ Python
+- ◻️ JavaScript
+- ☑️ Java
+- ◻️ C++
+- ☑️ Shell Scripting
+- ◻️ Other: [Specify]
 
 </details>
 
