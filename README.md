@@ -9,7 +9,7 @@ Hi, I'm Rajesh S. I am passionate about Development & Devops, and I enjoy writin
 ## Roles
 
 - [ ] Developer
-- ✅ DevOps Engineer
+ ✅ DevOps Engineer
 - [ ] Designer
 - [ ] Data Scientist
 - [ ] Product Manager
