@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="94977452.png" alt="Your Name">
+  <img src="picofme (2).png" alt="Your Name">
 </div>
 
 # About Me
