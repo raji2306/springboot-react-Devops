@@ -12,6 +12,7 @@ import com.devops.devopsproj.model.User;
 import com.devops.devopsproj.repository.UserRepository;
 
 @RestController
+@CrossOrigin("http://localhost:3000")
 public class UserController {
 
 	@Autowired
