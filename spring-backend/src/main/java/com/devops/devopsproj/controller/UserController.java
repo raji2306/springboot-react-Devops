@@ -18,35 +18,27 @@ import com.devops.devopsproj.model.User;
 import com.devops.devopsproj.repository.UserRepository;
 
 @RestController
-//@CrossOrigin("http://localhost:3000")
 public class UserController {
 
 	@Autowired
 	private UserRepository userRepository;
-	
-    @Value("${cors.origin}")
-    private String corsOrigin;
-	
-	@CrossOrigin(origins = "${cors.origin}")
+
 	@PostMapping(value = "/user", consumes = {"application/json"})
 	User newUser(@RequestBody User newUser) {
 		return userRepository.save(newUser);
 	}
 	
-	@CrossOrigin(origins = "${cors.origin}")
 	@GetMapping("/user-data")
 		List<User> getAllUsers(){
 			return userRepository.findAll();
 	}
 	
-	@CrossOrigin(origins = "${cors.origin}")
 	@GetMapping("/user/{id}")
 	User getUserById(@PathVariable Long id) {
 		return userRepository.findById(id)
 				.orElseThrow(()-> new UserNotFoundException(id));
 	}
 	
-	@CrossOrigin(origins = "${cors.origin}")	
 	@PutMapping("/user/{id}")
 	User updateUser(@RequestBody User newUser, @PathVariable Long id) {
 		return userRepository.findById(id).map(user->
@@ -58,7 +50,6 @@ public class UserController {
 		}).orElseThrow(()->new UserNotFoundException(id));
 	}
 
-	@CrossOrigin(origins = "${cors.origin}")
 	@DeleteMapping("/user/{id}")
 	String deleteUser(@PathVariable Long id) {
 		if(!userRepository.existsById(id)) {
