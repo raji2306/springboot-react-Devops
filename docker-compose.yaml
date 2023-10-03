@@ -15,7 +15,6 @@ services:
       - vol:/app
     restart: always
     depends_on:
-      - frontend
       - mysql-container
 
   mysql-container:
@@ -42,6 +41,8 @@ services:
     volumes:
       - vol:/app
     restart: always
+    depends_on:
+      - backend
 
 networks:
   mine:
