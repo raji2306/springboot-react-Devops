@@ -1,6 +1,6 @@
 version: '3.9'
 services:
-  backend:
+  backend: # raji2306/spring-boot:badass
     image: backend
     name: backend
     environment:
@@ -25,7 +25,7 @@ services:
               cpus: 0.25
               memory: 128M
               
-  mysql-container:
+  mysql-container: # raji2306/database
     image: mysql-container # Use a valid MySQL image
     name: mysql-container
     ports:
@@ -45,7 +45,7 @@ services:
               cpus: 0.25
               memory: 128M
 
-  frontend:
+  frontend: # raji2306/react-app
     image: frontend
     name: frontend
     environment:
