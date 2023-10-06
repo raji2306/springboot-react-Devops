@@ -16,7 +16,15 @@ services:
     restart: always
     depends_on:
       - mysql-container
-
+    deploy:
+        resources:
+            limits:
+              cpus: 0.50
+              memory: 512M
+            reservations:
+              cpus: 0.25
+              memory: 128M
+              
   mysql-container:
     image: mysql-container # Use a valid MySQL image
     name: mysql-container
@@ -28,6 +36,14 @@ services:
       - mine
     environment:
       - MYSQL_ROOT_PASSWORD=raji123* # Set the MySQL root password
+    deploy:
+        resources:
+            limits:
+              cpus: 0.50
+              memory: 512M
+            reservations:
+              cpus: 0.25
+              memory: 128M
 
   frontend:
     image: frontend
@@ -43,6 +59,14 @@ services:
     restart: always
     depends_on:
       - backend
+    deploy:
+        resources:
+            limits:
+              cpus: 0.50
+              memory: 512M
+            reservations:
+              cpus: 0.25
+              memory: 128M
 
 networks:
   mine:
