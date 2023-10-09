@@ -1,1 +1,96 @@
+name : Springboot-react-devops 
+
+run-name : springboot-run
+
+on :   #fork - Someone forks | gollum : Wiki updation | page_build : #Github Pages
+  push :
+    branches : 
+    - master 
+    - hot-fix
+    - '!feature' # means branch ignore, you can use 'branch-ignore' or '!' 
+    paths : 
+    - '**.sh'
+    tags : 
+    - '**-milestone'
+  branch_protection_rule :
+    types: [created, deleted]
+  issues:
+    types: [opened, milestoned]
+  pull_request:
+    branches: [ master, hot-fix ]
+  workflow_dispatch :
+  schedule:
+    - cron: '61 25 * * *'
+
+permissions: write-all # Set {} for no permissions
+
+env:
+  AUTHOR : production
+
+defaults: #default settings, it can override if you speicific it on Job Level
+  run:
+    shell: bash
+
+
+jobs :
+
+  Building-App : 
+    runs-on : ubuntu-latest
+    timeout-minutes: 10
+
+    steps :
+    - name : Giving permission to our Repository
+      uses: actions/checkout@v2
+      
+    - name : Creating Mysql Database
+      id : mysql-server
+      run : |
+            apt install mysql-server
+            CREATE USER 'root'@'localhost' IDENTIFIED BY 'raji123*';
+            CREATE DATABASE devops;
+            GRANT ALL PRIVILEGES ON devops.* TO 'root'@'localhost';
+            FLUSH PRIVILEGES;
+            exit;
+            
+    - name: Wait for MySQL to be ready
+      run: |
+        while ! mysqladmin ping -h localhost --silent; do
+          echo "Waiting for MySQL to become available..."
+          sleep 5
+        done
+      
+    - name: Set up JDK 17 for x64
+      uses: actions/setup-java@v3
+      with:
+        java-version: '17'
+      
+    - name : Building Maven project
+      run: mvn -B package --file ./spring-backend/pom.xml
+
+
+
+
+
+
+
+
+
+
+
+
+            
+
+  
+      
+  
+
+
+
+
+
+  
+
+
+
+
 
