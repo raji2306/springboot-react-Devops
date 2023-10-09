@@ -19,8 +19,8 @@ on :   #fork - Someone forks | gollum : Wiki updation | page_build : #Github Pag
   pull_request:
     branches: [ master, hot-fix ]
   workflow_dispatch :
-  schedule:
-    - cron: '61 25 * * *'
+  # schedule:
+  #   - cron: '61 25 * * *'
 
 permissions: write-all # Set {} for no permissions
 
