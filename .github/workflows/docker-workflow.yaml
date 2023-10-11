@@ -13,6 +13,8 @@ on :
       tag :
         required : true
         type : number 
+      dockerfile :
+        required : true
    secrets:
       DOCKER_USERNAME:
         required: true
@@ -35,6 +37,7 @@ jobs :
         with:
          image: ${{ inputs.userid }}/${{ inputs.image }}
          tags : ${{ inputs.tag }} 
+         dockerfile : ${{ inputs.dockerpath }}
          registry: docker.io
          username: ${{ secrets.DOCKER_USERNAME }}
          password: ${{ secrets.DOCKER_PASSWORD }}
