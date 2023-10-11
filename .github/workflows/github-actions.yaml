@@ -23,10 +23,8 @@ on :   #fork - Someone forks | gollum : Wiki updation | page_build : #Github Pag
   #   - cron: '61 25 * * *'
 
 permissions: write-all # Set {} for no permissions
-
 env:
   AUTHOR : production
-
 defaults: #default settings, it can override if you speicific it on Job Level
   run:
     shell: bash
@@ -53,8 +51,7 @@ jobs :
 
     services:
       mysql:
-        image: mysql-boom${{ github.run_number }}
-        registry: docker.io
+        image: raji2306/mysql-boom${{ github.run_number }}
         credentials:
           username: ${{ secrets.DOCKERHUB_USERNAME }} 
           password: ${{ secrets.DOCKERHUB_TOKEN }}
