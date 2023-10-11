@@ -35,23 +35,15 @@ defaults: #default settings, it can override if you speicific it on Job Level
 jobs :
 
   Building-docker-image :
-    runs-on : ubuntu-latest
-    timeout-minutes: 10
-
-    steps :
-    - name : Checkout the repo 
-      uses: actions/checkout@v3
-
-    - name : Building and pushing docker images
-      uses : mr-smithers-excellent/docker-build-push@v6
-      with :
-        image: repo/image
-        tags: v1, latest
-        registry: docker.io
-        dockerfile: Dockerfile.ci
-        username: ${{ secrets.DOCKER_USERNAME }}
-        password: ${{ secrets.DOCKER_PASSWORD }}
-        
+    uses : ./.github/workflows/docker-workflow.yaml
+    with :
+      userid : raji2306
+      image : mysql-boom
+      tags : ${{ github.run_number }}
+      dockerfile : Dockerfile
+    secrets:
+      DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
+      DOCKER_PASSWORD :  ${{ secrets.DOCKER_PASSWORD }}
 
 #--------------------------------------------------------------------------------------------------------------------------------------------------------------#
 
@@ -61,7 +53,8 @@ jobs :
 
     services:
       mysql:
-        image: mysql:8
+        image: mysql-boom${{ github.run_number }}
+        registry: docker.io
         credentials:
           username: ${{ secrets.DOCKERHUB_USERNAME }} 
           password: ${{ secrets.DOCKERHUB_TOKEN }}
