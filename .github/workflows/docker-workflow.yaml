@@ -10,11 +10,10 @@ on :
         type : string 
       userid :
         required : true
+        type : string
       tag :
         required : true
         type : number 
-      dockerfile :
-        required : true
    secrets:
       DOCKER_USERNAME:
         required: true
