@@ -84,7 +84,7 @@ jobs :
       uses: actions/upload-artifact@v3
       with:
         name: my-artifact
-        path: .
+        path: ~/spring-backend/target/devops-proj.jar
         retention-days: 5
 
 #-------------------------------------------------------------------Building Spring-boot Docker Image ------------------------------------------------------------------------------#
