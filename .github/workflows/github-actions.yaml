@@ -92,6 +92,7 @@ jobs :
 #-------------------------------------------------------------------Building Spring-boot Docker Image ------------------------------------------------------------------------------#
 
   Building-spring-boot-image :
+    needs : [ Building-docker-image, Building-App]
     uses : ./.github/workflows/docker-workflow.yaml
     with :
       image : "spring-image"                   # For 'mysql-boom' database 
