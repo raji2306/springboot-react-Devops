@@ -11,6 +11,7 @@ on :
       # userid :
       #   required : true
       #   type : string
+      artifact-path :
       tags :
         required : true
         type : string
