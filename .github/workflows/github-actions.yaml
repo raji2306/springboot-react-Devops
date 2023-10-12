@@ -54,7 +54,7 @@ jobs :
       COUNT: 31
     services:
       mysql:
-        image: raji2306/mysql-boom:${{ env.COUNT }}
+        image: raji2306/mysql-boom:31
         credentials:
           username: ${{ secrets.DOCKERHUB_USERNAME }} 
           password: ${{ secrets.DOCKERHUB_TOKEN }}
