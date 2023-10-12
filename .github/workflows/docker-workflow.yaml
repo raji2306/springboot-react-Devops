@@ -8,9 +8,9 @@ on :
       image :
         required : true
         type : string 
-      userid :
-        required : true
-        type : string
+      # userid :
+      #   required : true
+      #   type : string
       tags :
         required : true
         type : string
