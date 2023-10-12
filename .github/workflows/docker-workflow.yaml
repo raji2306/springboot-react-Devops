@@ -11,14 +11,14 @@ on :
       userid :
         required : true
         type : string
-      tag :
+      tags :
         required : true
-        type : number 
+        type : string
    secrets:
       DOCKER_USERNAME:
         required: true
       DOCKER_PASSWORD :
-        required : true 
+        required: true 
         
 jobs :
 
@@ -34,8 +34,8 @@ jobs :
       - name: docker-upload
         uses: mr-smithers-excellent/docker-build-push@v6
         with:
-         image: ${{ inputs.userid }}/${{ inputs.image }}
-         tags : ${{ inputs.tag }} 
+         image: raji2306/${{ inputs.image }}
+         tags : ${{ inputs.tag }}
          dockerfile : ${{ inputs.dockerfile }}
          registry: docker.io
          username: ${{ secrets.DOCKER_USERNAME }}
