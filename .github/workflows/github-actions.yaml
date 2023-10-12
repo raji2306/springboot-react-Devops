@@ -25,6 +25,9 @@ on :   #fork - Someone forks | gollum : Wiki updation | page_build : #Github Pag
 permissions: write-all # Set {} for no permissions
 env:
   AUTHOR : production
+  image : "mysql-boom"
+  tags : 31
+  dockerfile : Dockerfile
 defaults: #default settings, it can override if you speicific it on Job Level
   run:
     shell: bash
@@ -35,9 +38,9 @@ jobs :
   Building-docker-image :
     uses : ./.github/workflows/docker-workflow.yaml
     with :
-      image : "mysql-boom"
+      image : "spring-image"
       tags : ${{ github.run_number }}
-      dockerfile : Dockerfile
+      dockerfile : ./spring-backend/Dockerfile
     secrets:
       DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
       DOCKER_PASSWORD :  ${{ secrets.DOCKER_PASSWORD }}
@@ -51,7 +54,7 @@ jobs :
 
     services:
       mysql:
-        image: raji2306/mysql-boom:${{ github.run_number }}
+        image: raji2306/mysql-boom:${{ env.tags }}
         credentials:
           username: ${{ secrets.DOCKERHUB_USERNAME }} 
           password: ${{ secrets.DOCKERHUB_TOKEN }}
