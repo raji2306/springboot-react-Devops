@@ -80,7 +80,7 @@ jobs :
     - name : Building Maven project
       run: |
             mvn -B package --file ./spring-backend/pom.xml
-            echo "pwd"
+            pwd
 
     - name: 'Upload Artifact'
       uses: actions/upload-artifact@v3
@@ -91,15 +91,15 @@ jobs :
 
 #-------------------------------------------------------------------Building Spring-boot Docker Image ------------------------------------------------------------------------------#
 
-  # Building-spring-boot-image :
-  #   uses : ./.github/workflows/docker-workflow.yaml
-  #   with :
-  #     image : "spring-image"                   # For 'mysql-boom' database 
-  #     tags : ${{ github.run_number }}
-  #     dockerfile : ./spring-backend/Dockerfile # Use Dockerfile Location
-  #   secrets:
-  #     DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
-  #     DOCKER_PASSWORD :  ${{ secrets.DOCKER_PASSWORD }}
-
-#----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------#
+  Building-spring-boot-image :
+    uses : ./.github/workflows/docker-workflow.yaml
+    with :
+      image : "spring-image"                   # For 'mysql-boom' database 
+      tags : ${{ github.run_number }}
+      dockerfile : ./spring-backend/Dockerfile # Use Dockerfile Location
+    secrets:
+          DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
+          DOCKER_PASSWORD :  ${{ secrets.DOCKER_PASSWORD }}
+          
+#----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------#
 
