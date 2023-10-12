@@ -78,13 +78,15 @@ jobs :
         cache: maven
       
     - name : Building Maven project
-      run: mvn -B package --file ./spring-backend/pom.xml
+      run: |
+            mvn -B package --file ./spring-backend/pom.xml
+            echo "pwd"
 
     - name: 'Upload Artifact'
       uses: actions/upload-artifact@v3
       with:
         name: my-artifact
-        path: ./springboot-react-Devops/springboot-react-Devops/spring-backend/devops-proj.jar
+        path: ./spring-backend/devops-proj.jar
         retention-days: 5
 
 #-------------------------------------------------------------------Building Spring-boot Docker Image ------------------------------------------------------------------------------#
