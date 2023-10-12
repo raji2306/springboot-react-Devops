@@ -51,7 +51,7 @@ jobs :
 
     services:
       mysql:
-        image: raji2306/mysql-boom${{ github.run_number }}
+        image: raji2306/mysql-boom:${{ github.run_number }}
         credentials:
           username: ${{ secrets.DOCKERHUB_USERNAME }} 
           password: ${{ secrets.DOCKERHUB_TOKEN }}
