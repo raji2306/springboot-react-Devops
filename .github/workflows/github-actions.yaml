@@ -44,40 +44,38 @@ jobs :
 
 #--------------------------------------------------------------------------------------------------------------------------------------------------------------#
 
-  # Building-App : 
-  #   runs-on : ubuntu-latest
-  #   timeout-minutes: 10
+  Building-App : 
+    runs-on : ubuntu-latest
+    timeout-minutes: 10
 
-  #   services:
-  #     mysql:
-  #       image: raji2306/mysql-boom${{ github.run_number }}
-  #       credentials:
-  #         username: ${{ secrets.DOCKERHUB_USERNAME }} 
-  #         password: ${{ secrets.DOCKERHUB_TOKEN }}
-  #       env:
-  #         MYSQL_ROOT_PASSWORD: raji123*
-  #         MYSQL_DATABASE: devops
-  #       ports:
-  #         - 3306/tcp
-  #       options: --health-cmd="mysqladmin ping" --health-interval=10s --health-timeout=5s --health-retries=3
+    services:
+      mysql:
+        image: raji2306/mysql-boom${{ github.run_number }}
+        credentials:
+          username: ${{ secrets.DOCKERHUB_USERNAME }} 
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+        env:
+          MYSQL_ROOT_PASSWORD: raji123*
+          MYSQL_DATABASE: devops
+        ports:
+          - 3306/tcp
+        options: --health-cmd="mysqladmin ping" --health-interval=10s --health-timeout=5s --health-retries=3
 
-  #   steps :
-  #   - name : Giving permission to our Repository
-  #     uses: actions/checkout@v2
+    steps :
+    - name : Giving permission to our Repository
+      uses: actions/checkout@v2
       
-  #   - name: Set up JDK 17 for x64
-  #     uses: actions/setup-java@v3
-  #     with:
-  #       java-version: '17'
-  #       distribution: 'temurin'
-  #       cache: maven
+    - name: Set up JDK 17 for x64
+      uses: actions/setup-java@v3
+      with:
+        java-version: '17'
+        distribution: 'temurin'
+        cache: maven
       
-  #   - name : Building Maven project
-  #     run: mvn -B package --file ./spring-backend/pom.xml
+    - name : Building Maven project
+      run: mvn -B package --file ./spring-backend/pom.xml
 
-
-
-
+#------------------------------------------------------------------------------------------------------------------------------------------------------------------#
 
 
 
