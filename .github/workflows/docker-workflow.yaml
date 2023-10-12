@@ -38,7 +38,7 @@ jobs :
         uses: mr-smithers-excellent/docker-build-push@v6
         with:
          image: raji2306/${{ inputs.image }}
-         tags : ${{ inputs.tag }}
+         tags : ${{ inputs.tags }}
          dockerfile : ${{ inputs.dockerfile }}
          registry: docker.io
          username: ${{ secrets.DOCKER_USERNAME }}
