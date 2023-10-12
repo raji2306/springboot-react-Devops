@@ -26,7 +26,6 @@ permissions: write-all # Set {} for no permissions
 env:
   AUTHOR : production
   image : "mysql-boom"
-  count : 31
   dockerfile : Dockerfile
 defaults: #default settings, it can override if you speicific it on Job Level
   run:
