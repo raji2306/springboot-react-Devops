@@ -52,7 +52,7 @@ jobs :
     runs-on : ubuntu-latest
     timeout-minutes: 10
     env:
-      COUNT: ${{ env.count }}
+      COUNT: 31
     services:
       mysql:
         image: raji2306/mysql-boom:${{ env.COUNT }}
