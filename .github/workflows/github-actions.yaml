@@ -51,10 +51,11 @@ jobs :
     needs : Building-docker-image
     runs-on : ubuntu-latest
     timeout-minutes: 10
-
+    env:
+      COUNT: ${{ env.count }}
     services:
       mysql:
-        image: raji2306/mysql-boom:${{ env.count }}
+        image: raji2306/mysql-boom:${{ env.COUNT }}
         credentials:
           username: ${{ secrets.DOCKERHUB_USERNAME }} 
           password: ${{ secrets.DOCKERHUB_TOKEN }}
