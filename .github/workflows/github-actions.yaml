@@ -31,7 +31,7 @@ defaults: #default settings, it can override if you speicific it on Job Level
   run:
     shell: bash
 
-#---------------------------------------------- Building Doker Image for Mysql ------------------------------------------------------------------------------------------#
+#---------------------------------------------- Building Docker Image for Mysql ------------------------------------------------------------------------------------------#
 
 jobs :
 
@@ -92,7 +92,7 @@ jobs :
 #-------------------------------------------------------------------Building Spring-boot Docker Image ------------------------------------------------------------------------------#
 
   Building-spring-boot-image :
-    needs : [ Building-docker-image, Building-App]
+    needs : [ Building-docker-image, Building-App ]
     uses : ./.github/workflows/docker-workflow.yaml
     with :
       image : "spring-image"                   # For 'mysql-boom' database 
