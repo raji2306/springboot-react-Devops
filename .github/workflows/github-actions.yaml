@@ -31,20 +31,21 @@ defaults: #default settings, it can override if you speicific it on Job Level
   run:
     shell: bash
 
+#---------------------------------------------- Building Doker Image for Mysql ------------------------------------------------------------------------------------------#
 
 jobs :
 
   Building-docker-image :
     uses : ./.github/workflows/docker-workflow.yaml
     with :
-      image : "spring-image"
+      image : "mysql-boom"
       tags : ${{ github.run_number }}
-      dockerfile : ./spring-backend/Dockerfile
+      dockerfile : Dockerfile
     secrets:
       DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
       DOCKER_PASSWORD :  ${{ secrets.DOCKER_PASSWORD }}
 
-#--------------------------------------------------------------------------------------------------------------------------------------------------------------#
+#-----------------------------------------------------Testing our Application with Mysql Connectivity --------------------------------------------------------------------#
 
   Building-App : 
     needs : Building-docker-image
@@ -54,7 +55,7 @@ jobs :
       COUNT: 31
     services:
       mysql:
-        image: raji2306/mysql-boom:31
+        image: raji2306/mysql-boom:${{ github.run_number }} # raji2306/mysql-boom:${{ github.run_number }}
         credentials:
           username: ${{ secrets.DOCKERHUB_USERNAME }} 
           password: ${{ secrets.DOCKERHUB_TOKEN }}
@@ -79,28 +80,24 @@ jobs :
     - name : Building Maven project
       run: mvn -B package --file ./spring-backend/pom.xml
 
-#------------------------------------------------------------------------------------------------------------------------------------------------------------------#
+    - name: 'Upload Artifact'
+      uses: actions/upload-artifact@v3
+      with:
+        name: my-artifact
+        path: ./target/devops-proj.jar
+        retention-days: 5
 
+#-------------------------------------------------------------------Building Spring-boot Docker Image ------------------------------------------------------------------------------#
 
+  # Building-spring-boot-image :
+  #   uses : ./.github/workflows/docker-workflow.yaml
+  #   with :
+  #     image : "spring-image"                   # For 'mysql-boom' database 
+  #     tags : ${{ github.run_number }}
+  #     dockerfile : ./spring-backend/Dockerfile # Use Dockerfile Location
+  #   secrets:
+  #     DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
+  #     DOCKER_PASSWORD :  ${{ secrets.DOCKER_PASSWORD }}
 
-
-
-
-
-
-            
-
-  
-      
-  
-
-
-
-
-
-  
-
-
-
-
+#----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------#
 
