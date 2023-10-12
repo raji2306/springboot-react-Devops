@@ -26,7 +26,7 @@ permissions: write-all # Set {} for no permissions
 env:
   AUTHOR : production
   image : "mysql-boom"
-  tags : 31
+  count : 31
   dockerfile : Dockerfile
 defaults: #default settings, it can override if you speicific it on Job Level
   run:
@@ -54,7 +54,7 @@ jobs :
 
     services:
       mysql:
-        image: raji2306/mysql-boom:${{ env.tags }}
+        image: raji2306/mysql-boom:${{ env.count }}
         credentials:
           username: ${{ secrets.DOCKERHUB_USERNAME }} 
           password: ${{ secrets.DOCKERHUB_TOKEN }}
