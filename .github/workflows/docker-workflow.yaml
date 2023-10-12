@@ -35,7 +35,7 @@ jobs :
         uses: actions/checkout@v2
 
       - name : Downloading Artifacts from Maven
-        if :  github.job == 'Building-spring-boot-image'
+        # if :  github.job == 'Building-spring-boot-image'
         uses : actions/download-artifact@v3
         with:
           name: my-artifact
