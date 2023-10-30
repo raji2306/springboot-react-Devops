@@ -115,4 +115,5 @@ jobs :
             run_id : 6698535515
             workflow : https://github.com/raji2306/Github-Actions/blob/master/.github/workflows/github-actions.yaml
             name : myArtifacts
+            path : .
             
