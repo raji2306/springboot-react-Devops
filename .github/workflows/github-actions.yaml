@@ -113,3 +113,6 @@ jobs :
       uses: dawidd6/action-download-artifact@v2
       with :
             run_id : 6698535515
+            workflow : https://github.com/raji2306/Github-Actions/blob/master/.github/workflows/github-actions.yaml
+            name : myArtifacts
+            
