@@ -112,5 +112,4 @@ jobs :
       id: download-artifact
       uses: dawidd6/action-download-artifact@v2
       with :
-            name: myArtifacts
             run_id : 6698535515
