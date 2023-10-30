@@ -113,4 +113,4 @@ jobs :
       uses: dawidd6/action-download-artifact@v2
       with :
             name: myArtifacts
-            workflow_run_id: 6698535515
+            run_id : 6698535515
