@@ -21,6 +21,7 @@ Hi, I'm Rajesh S. I am passionate about Development & Devops, and I enjoy writin
 <details>
 <summary><strong>Languages Known</strong></summary>
 
+
 - [x] Python
 - [ ] JavaScript
 - [x] Java
