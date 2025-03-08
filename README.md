@@ -19,7 +19,7 @@ Hi, I'm Rajesh S. I am passionate about Development & Devops, and I enjoy writin
 - [ ] Product Manager
 
 <details>
-<summary><strong>Languages Known</strong></summary
+<summary><strong>Languages Known</strong></summary>
 
 - [x] Python
 - [ ] JavaScript
