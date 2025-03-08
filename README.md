@@ -18,9 +18,8 @@ Hi, I'm Rajesh S. I am passionate about Development & Devops, and I enjoy writin
 - [ ] Data Scientist
 - [ ] Product Manager
 
-<details>
-<summary><strong>Languages Known</strong></summary>
 
+## Languages Known
 
 - [x] Python
 - [ ] JavaScript
@@ -28,7 +27,6 @@ Hi, I'm Rajesh S. I am passionate about Development & Devops, and I enjoy writin
 - [ ] C++
 - [x] Shell Scripting
 
-</details>
 
 ## Skills
 
