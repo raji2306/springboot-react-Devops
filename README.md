@@ -14,11 +14,9 @@ Hi, I'm Rajesh S. I am passionate about Development & Devops, and I enjoy writin
   
 - [ ] Developer
 - [x] DevOps Engineer
-- [ ] Designer
+- [x] SRE
 - [ ] Data Scientist
 - [ ] Product Manager
-- [ ] Researcher
-- [ ] Other: [Specify]
 
 <details>
 <summary><strong>Languages Known</strong></summary
@@ -28,7 +26,6 @@ Hi, I'm Rajesh S. I am passionate about Development & Devops, and I enjoy writin
 - [x] Java
 - [ ] C++
 - [x] Shell Scripting
-- [ ] Other: [Specify]
 
 </details>
 
