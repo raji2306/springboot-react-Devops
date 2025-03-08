@@ -6,6 +6,10 @@
 
 Hi, I'm Rajesh S. I am passionate about Development & Devops, and I enjoy writing blogs  and make youtube videos. You can find me on https://medium.com/@rajeshsuresh154
 
+## 🏆 Certifications
+[![GitHub Actions Certified](https://img.shields.io/badge/GitHub%20Actions-Certified-brightgreen)](https://examregistration.github.com/certification/ACTIONS)
+
+ 
 ## Roles
   
 - [ ] Developer
